@@ -24,6 +24,87 @@
                 flex:1;
                 filter: invert(100%);
             }
+
+            body {
+                background-color: #121212;
+            }
+
+            #recolor {
+                filter: invert(100%);
+
+            }
+
+            .selector1 {
+                width:100%;
+                height: 88%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                overflow: hidden;
+            }
+
+            .listen1 {
+                height:100%;
+                width:100%;
+                flex: 1;
+            }
+
+            .read1 {
+                height:100%;
+                width:100%;
+                flex: 1;
+            }
+
+            #read {
+                height: 30%;
+                width:30%;
+                transform: translateY(15%);
+            }
+
+            #listen {
+                transform: translateY(15%);
+                width: 30%;
+                height: 30%;
+            }
+
+            #read:hover .read1{
+                transform: scale(95%);
+                filter: opacity(60%) invert(100%);
+            }
+
+            #listen:hover .listen1{
+                transform: scale(95%);
+                filter: opacity(60%) invert(100%);
+            }
+
+            @media (max-width: 1100px) {
+
+                .toppo {
+                height:75%;
+                }
+
+                .selector1 {
+                    height:auto;
+                    flex-direction:column;
+                    justify-content: space-around;
+                    overflow: hidden;
+                }
+
+                #read {
+                    width:50%;
+                    height:50%;
+                    margin-left:25%;
+                    margin-right:25%
+                }
+                
+                #listen {
+                    width:50%;
+                    height:50%;
+                    margin-left:25%;                
+                    margin-right:25%
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -33,6 +114,22 @@
                 src="./dat/suerken_logo_schwarz.svg" 
                 id="logoimg">
             </div>
+        </div>
+        <div class="selector1">
+            <a id="listen"
+            href="">
+                <img src="dat/listenlogo.svg"
+                id="recolor"
+                class="listen1"
+                >
+            </a>
+            <a id="read"
+            href="">
+                <img src="dat/readlogo.svg"
+                id="recolor"
+                class="read1"
+                > 
+            </a>
         </div>
     </body>
 </html>
